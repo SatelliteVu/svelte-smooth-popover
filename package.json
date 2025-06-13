@@ -1,15 +1,19 @@
 {
 	"name": "svelte-smooth-popover",
-	"version": "1.0.9",
+	"version": "1.0.10",
 	"repository": {
 		"type": "github",
 		"url": "https://github.com/AskingQuestions/svelte-popover"
 	},
 	"type": "module",
 	"description": "Robust unstyled <Popover> component for Svelte",
-	"main": "index.js",
-	"svelte": "index.js",
-	"module": "dist/index.mjs",
+	"exports": {
+		".": {
+			"default": "./dist/index.js",
+			"svelte": "./dist/Popover.svelte",
+			"types": "./dist/index.d.ts"
+		}
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package",
